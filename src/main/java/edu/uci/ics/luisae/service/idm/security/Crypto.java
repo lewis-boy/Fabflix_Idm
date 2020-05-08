@@ -7,6 +7,11 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 
+
+//todo forward-only: gets password then salt and hash, cannot go backward.
+//todo salting adds an extra layer of security
+//todo could increase security by randomizing the iterations and key-length
+//todo
 public final class Crypto {
     private static SecureRandom secRand = new SecureRandom();
     public static final int ITERATIONS = 10000;

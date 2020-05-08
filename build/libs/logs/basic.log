@@ -1,44 +1,222 @@
-[2019/12/13 15:32:58][CONFIG][initService]  Starting service...
-[2019/12/13 15:32:58][CONFIG][currentConfigs]  Scheme: http://
-[2019/12/13 15:32:58][CONFIG][currentConfigs]  Hostname: 0.0.0.0
-[2019/12/13 15:32:58][CONFIG][currentConfigs]  Port: 12346
-[2019/12/13 15:32:58][CONFIG][currentConfigs]  Path: /api
-[2019/12/13 15:32:58][CONFIG][currentConfigs]  Logger output directory: ./logs/
-[2019/12/13 15:32:58][CONFIG][currentConfigs]  dbUserName: root
-[2019/12/13 15:32:58][CONFIG][currentConfigs]  dbPassword: Platinum08!Boy!
-[2019/12/13 15:32:58][CONFIG][currentConfigs]  dbHostName: 127.0.0.1
-[2019/12/13 15:32:58][CONFIG][currentConfigs]  dbPort: 3306
-[2019/12/13 15:32:58][CONFIG][currentConfigs]  dbName: myIdm
-[2019/12/13 15:32:58][CONFIG][currentConfigs]  session timeout: 180000
-[2019/12/13 15:32:58][CONFIG][currentConfigs]  session expiration: 600000
-[2019/12/13 15:32:58][CONFIG][connectToDatabase]  Connecting to database...
-[2019/12/13 15:32:58][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://127.0.0.1:3306/myIdm?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
-[2019/12/13 15:32:59][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://127.0.0.1:3306/myIdm?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
-[2019/12/13 15:32:59][CONFIG][initHTTPServer]  Initializing HTTP server...
-[2019/12/13 15:32:59][CONFIG][initHTTPServer]  Building URI from configs...
-[2019/12/13 15:32:59][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:12346/api
-[2019/12/13 15:32:59][CONFIG][initHTTPServer]  Set Jersey resources.
-[2019/12/13 15:32:59][CONFIG][initHTTPServer]  Set Jackson as serializer.
-[2019/12/13 15:32:59][CONFIG][initHTTPServer]  Set session timeout and token expiration.
-[2019/12/13 15:32:59][CONFIG][initHTTPServer]  Starting HTTP server...
-[2019/12/13 15:33:01][CONFIG][initHTTPServer]  HTTP server started.
-[2019/12/13 15:33:01][CONFIG][initService]  Service initialized.
-[2019/12/13 15:33:07][INFO][session]  Entering session
-[2019/12/13 15:33:07][INFO][modelMapper]  Mapping object from String
-[2019/12/13 15:33:07][INFO][eInvalidFormat]  @uci.edu
-[2019/12/13 15:33:07][INFO][buildResponse]  Response being built with Result: EMAIL_INVALID_FORMAT
-[2019/12/13 15:33:38][INFO][session]  Entering session
-[2019/12/13 15:33:38][INFO][modelMapper]  Mapping object from String
-[2019/12/13 15:33:38][INFO][eInvalidFormat]  peteruci.edu
-[2019/12/13 15:33:38][INFO][buildResponse]  Response being built with Result: EMAIL_INVALID_FORMAT
-[2019/12/13 15:37:16][INFO][privilege]  Entering privilege
-[2019/12/13 15:37:16][INFO][modelMapper]  Mapping object from String
-[2019/12/13 15:37:16][INFO][buildResponse]  Response being built with Result: PLEVEL_OUT_OF_RANGE
-[2019/12/13 15:37:36][INFO][privilege]  Entering privilege
-[2019/12/13 15:37:36][INFO][modelMapper]  Mapping object from String
-[2019/12/13 15:37:36][INFO][buildResponse]  Response being built with Result: PLEVEL_OUT_OF_RANGE
-[2019/12/13 15:38:03][INFO][privilege]  Entering privilege
-[2019/12/13 15:38:03][INFO][modelMapper]  Mapping object from String
-[2019/12/13 15:38:03][INFO][eInvalidFormat]  @uci.edu
-[2019/12/13 15:38:03][WARNING][privilege]  INVALID FORNMAT
-[2019/12/13 15:38:03][INFO][buildResponse]  Response being built with Result: EMAIL_INVALID_FORMAT
+[2020/05/07 17:06:47][CONFIG][initService]  Starting service...
+[2020/05/07 17:06:47][CONFIG][currentConfigs]  Scheme: http://
+[2020/05/07 17:06:47][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2020/05/07 17:06:47][CONFIG][currentConfigs]  Port: 12346
+[2020/05/07 17:06:47][CONFIG][currentConfigs]  Path: /api
+[2020/05/07 17:06:47][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2020/05/07 17:06:47][CONFIG][currentConfigs]  dbUserName: root
+[2020/05/07 17:06:47][CONFIG][currentConfigs]  dbPassword: Platinum08!Boy!
+[2020/05/07 17:06:47][CONFIG][currentConfigs]  dbHostName: 127.0.0.1
+[2020/05/07 17:06:47][CONFIG][currentConfigs]  dbPort: 3306
+[2020/05/07 17:06:47][CONFIG][currentConfigs]  dbName: myIdm
+[2020/05/07 17:06:47][CONFIG][currentConfigs]  session timeout: 1800000
+[2020/05/07 17:06:47][CONFIG][currentConfigs]  session expiration: 3600000
+[2020/05/07 17:06:47][CONFIG][connectToDatabase]  Connecting to database...
+[2020/05/07 17:06:48][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://127.0.0.1:3306/myIdm?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2020/05/07 17:06:49][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://127.0.0.1:3306/myIdm?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2020/05/07 17:06:49][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2020/05/07 17:06:49][CONFIG][initHTTPServer]  Building URI from configs...
+[2020/05/07 17:06:49][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:12346/api
+[2020/05/07 17:06:49][CONFIG][initHTTPServer]  Set Jersey resources.
+[2020/05/07 17:06:49][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2020/05/07 17:06:49][CONFIG][initHTTPServer]  Set session timeout and token expiration.
+[2020/05/07 17:06:49][CONFIG][initHTTPServer]  Starting HTTP server...
+[2020/05/07 17:06:50][CONFIG][initHTTPServer]  HTTP server started.
+[2020/05/07 17:06:50][CONFIG][initService]  Service initialized.
+[2020/05/07 17:07:05][INFO][login]  Entering Login Endpoint
+[2020/05/07 17:07:05][INFO][modelMapper]  Mapping object from Json String and Response Model was given
+[2020/05/07 17:07:05][INFO][modelMapper]  JSON String: {"email":"fakeluisae08@uci.edu","password":["S","t","u","d","e","n","t","0","8"]}
+[2020/05/07 17:07:05][INFO][printPassword]   S
+[2020/05/07 17:07:05][INFO][printPassword]   t
+[2020/05/07 17:07:05][INFO][printPassword]   u
+[2020/05/07 17:07:05][INFO][printPassword]   d
+[2020/05/07 17:07:05][INFO][printPassword]   e
+[2020/05/07 17:07:05][INFO][printPassword]   n
+[2020/05/07 17:07:05][INFO][printPassword]   t
+[2020/05/07 17:07:05][INFO][printPassword]   0
+[2020/05/07 17:07:05][INFO][printPassword]   8
+[2020/05/07 17:07:05][INFO][eInvalidFormat]  fakeluisae08@uci.edu
+[2020/05/07 17:07:05][INFO][login]  Exiting Login Endpoint Normally
+[2020/05/07 17:07:05][INFO][LoginHandler]  Inside LoginHandler
+[2020/05/07 17:07:05][INFO][userInDb]  Query for looking for user: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('user_id',user_id,'email',email,'status',status,'plevel',plevel,'salt',salt,'pword',pword) as UserFound FROM user WHERE email LIKE 'fakeluisae08@uci.edu';
+[2020/05/07 17:07:08][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:07:08][INFO][modelMapper]  JSON String: {"salt": "c47de7a8", "email": "fakeluisae08@uci.edu", "pword": "c3e757e7a8838259aa4fefa438eb3514af7acd94b54001a51d95e177499d3369755f9472f733ccd14c1f6dcc27b0799fdcd306aeccb6ceaad83c8e4b6d6e9a10", "plevel": 5, "status": 1, "user_id": 24}
+[2020/05/07 17:07:10][INFO][buildResponse]  Response being built with Result: LOGGED_IN_SUCCESSFULLY
+[2020/05/07 17:07:11][INFO][session]  Entering Session Endpoint
+[2020/05/07 17:07:11][INFO][modelMapper]  Mapping object from Json String and Response Model was given
+[2020/05/07 17:07:11][INFO][modelMapper]  JSON String: {"email":"fakeluisae08@uci.edu","session_id":"d1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f"}
+[2020/05/07 17:07:11][INFO][eInvalidFormat]  fakeluisae08@uci.edu
+[2020/05/07 17:07:11][INFO][session]  Exiting Session Endpoint Normally
+[2020/05/07 17:07:11][INFO][SessionHandler]  Inside SessionHandler
+[2020/05/07 17:07:11][INFO][userInDb]  Query for looking for user: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('user_id',user_id,'email',email,'status',status,'plevel',plevel,'salt',salt,'pword',pword) as UserFound FROM user WHERE email LIKE 'fakeluisae08@uci.edu';
+[2020/05/07 17:07:11][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:07:11][INFO][modelMapper]  JSON String: {"salt": "c47de7a8", "email": "fakeluisae08@uci.edu", "pword": "c3e757e7a8838259aa4fefa438eb3514af7acd94b54001a51d95e177499d3369755f9472f733ccd14c1f6dcc27b0799fdcd306aeccb6ceaad83c8e4b6d6e9a10", "plevel": 5, "status": 1, "user_id": 24}
+[2020/05/07 17:07:11][INFO][sessionInDb]  Query for checking if session is in the database: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('session_id',session_id,'email',email,'status',status,'time_created',time_created,'last_used',last_used,'expr_time',expr_time)as SessionFound FROM session WHERE session_id = 'd1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f';
+[2020/05/07 17:07:11][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:07:11][INFO][modelMapper]  JSON String: {"email": "fakeluisae08@uci.edu", "status": 1, "expr_time": "2020-05-07 18:07:10.000000", "last_used": "2020-05-07 17:07:10.000000", "session_id": "d1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f", "time_created": "2020-05-07 17:07:10.000000"}
+[2020/05/07 17:07:11][INFO][SessionHandler]  current: 2020-05-07 17:07:11.701
+[2020/05/07 17:07:11][INFO][SessionHandler]  last_used: 2020-05-07 17:07:10.0
+[2020/05/07 17:07:11][INFO][SessionHandler]  expired: 2020-05-07 18:07:10.0
+[2020/05/07 17:07:11][INFO][buildResponse]  Response being built with Result: SESSION_ACTIVE
+[2020/05/07 17:08:17][INFO][session]  Entering Session Endpoint
+[2020/05/07 17:08:17][INFO][modelMapper]  Mapping object from Json String and Response Model was given
+[2020/05/07 17:08:17][INFO][modelMapper]  JSON String: {"email":"fakeluisae08@uci.edu","session_id":"d1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f"}
+[2020/05/07 17:08:17][INFO][eInvalidFormat]  fakeluisae08@uci.edu
+[2020/05/07 17:08:17][INFO][session]  Exiting Session Endpoint Normally
+[2020/05/07 17:08:17][INFO][SessionHandler]  Inside SessionHandler
+[2020/05/07 17:08:17][INFO][userInDb]  Query for looking for user: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('user_id',user_id,'email',email,'status',status,'plevel',plevel,'salt',salt,'pword',pword) as UserFound FROM user WHERE email LIKE 'fakeluisae08@uci.edu';
+[2020/05/07 17:08:17][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:08:17][INFO][modelMapper]  JSON String: {"salt": "c47de7a8", "email": "fakeluisae08@uci.edu", "pword": "c3e757e7a8838259aa4fefa438eb3514af7acd94b54001a51d95e177499d3369755f9472f733ccd14c1f6dcc27b0799fdcd306aeccb6ceaad83c8e4b6d6e9a10", "plevel": 5, "status": 1, "user_id": 24}
+[2020/05/07 17:08:17][INFO][sessionInDb]  Query for checking if session is in the database: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('session_id',session_id,'email',email,'status',status,'time_created',time_created,'last_used',last_used,'expr_time',expr_time)as SessionFound FROM session WHERE session_id = 'd1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f';
+[2020/05/07 17:08:17][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:08:17][INFO][modelMapper]  JSON String: {"email": "fakeluisae08@uci.edu", "status": 1, "expr_time": "2020-05-07 18:07:10.000000", "last_used": "2020-05-07 17:07:12.000000", "session_id": "d1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f", "time_created": "2020-05-07 17:07:10.000000"}
+[2020/05/07 17:08:17][INFO][SessionHandler]  current: 2020-05-07 17:08:17.45
+[2020/05/07 17:08:17][INFO][SessionHandler]  last_used: 2020-05-07 17:07:12.0
+[2020/05/07 17:08:17][INFO][SessionHandler]  expired: 2020-05-07 18:07:10.0
+[2020/05/07 17:08:17][INFO][buildResponse]  Response being built with Result: SESSION_ACTIVE
+[2020/05/07 17:08:35][INFO][session]  Entering Session Endpoint
+[2020/05/07 17:08:35][INFO][modelMapper]  Mapping object from Json String and Response Model was given
+[2020/05/07 17:08:35][INFO][modelMapper]  JSON String: {"email":"fakeluisae08@uci.edu","session_id":"d1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f"}
+[2020/05/07 17:08:35][INFO][eInvalidFormat]  fakeluisae08@uci.edu
+[2020/05/07 17:08:35][INFO][session]  Exiting Session Endpoint Normally
+[2020/05/07 17:08:35][INFO][SessionHandler]  Inside SessionHandler
+[2020/05/07 17:08:35][INFO][userInDb]  Query for looking for user: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('user_id',user_id,'email',email,'status',status,'plevel',plevel,'salt',salt,'pword',pword) as UserFound FROM user WHERE email LIKE 'fakeluisae08@uci.edu';
+[2020/05/07 17:08:35][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:08:35][INFO][modelMapper]  JSON String: {"salt": "c47de7a8", "email": "fakeluisae08@uci.edu", "pword": "c3e757e7a8838259aa4fefa438eb3514af7acd94b54001a51d95e177499d3369755f9472f733ccd14c1f6dcc27b0799fdcd306aeccb6ceaad83c8e4b6d6e9a10", "plevel": 5, "status": 1, "user_id": 24}
+[2020/05/07 17:08:35][INFO][sessionInDb]  Query for checking if session is in the database: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('session_id',session_id,'email',email,'status',status,'time_created',time_created,'last_used',last_used,'expr_time',expr_time)as SessionFound FROM session WHERE session_id = 'd1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f';
+[2020/05/07 17:08:35][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:08:35][INFO][modelMapper]  JSON String: {"email": "fakeluisae08@uci.edu", "status": 1, "expr_time": "2020-05-07 18:07:10.000000", "last_used": "2020-05-07 17:08:17.000000", "session_id": "d1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f", "time_created": "2020-05-07 17:07:10.000000"}
+[2020/05/07 17:08:35][INFO][SessionHandler]  current: 2020-05-07 17:08:35.873
+[2020/05/07 17:08:35][INFO][SessionHandler]  last_used: 2020-05-07 17:08:17.0
+[2020/05/07 17:08:35][INFO][SessionHandler]  expired: 2020-05-07 18:07:10.0
+[2020/05/07 17:08:35][INFO][buildResponse]  Response being built with Result: SESSION_ACTIVE
+[2020/05/07 17:09:15][INFO][session]  Entering Session Endpoint
+[2020/05/07 17:09:15][INFO][modelMapper]  Mapping object from Json String and Response Model was given
+[2020/05/07 17:09:15][INFO][modelMapper]  JSON String: {"email":"fakeluisae08@uci.edu","session_id":"d1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f"}
+[2020/05/07 17:09:15][INFO][eInvalidFormat]  fakeluisae08@uci.edu
+[2020/05/07 17:09:15][INFO][session]  Exiting Session Endpoint Normally
+[2020/05/07 17:09:15][INFO][SessionHandler]  Inside SessionHandler
+[2020/05/07 17:09:15][INFO][userInDb]  Query for looking for user: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('user_id',user_id,'email',email,'status',status,'plevel',plevel,'salt',salt,'pword',pword) as UserFound FROM user WHERE email LIKE 'fakeluisae08@uci.edu';
+[2020/05/07 17:09:15][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:09:15][INFO][modelMapper]  JSON String: {"salt": "c47de7a8", "email": "fakeluisae08@uci.edu", "pword": "c3e757e7a8838259aa4fefa438eb3514af7acd94b54001a51d95e177499d3369755f9472f733ccd14c1f6dcc27b0799fdcd306aeccb6ceaad83c8e4b6d6e9a10", "plevel": 5, "status": 1, "user_id": 24}
+[2020/05/07 17:09:15][INFO][sessionInDb]  Query for checking if session is in the database: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('session_id',session_id,'email',email,'status',status,'time_created',time_created,'last_used',last_used,'expr_time',expr_time)as SessionFound FROM session WHERE session_id = 'd1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f';
+[2020/05/07 17:09:15][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:09:15][INFO][modelMapper]  JSON String: {"email": "fakeluisae08@uci.edu", "status": 1, "expr_time": "2020-05-07 18:07:10.000000", "last_used": "2020-05-07 17:08:36.000000", "session_id": "d1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f", "time_created": "2020-05-07 17:07:10.000000"}
+[2020/05/07 17:09:15][INFO][SessionHandler]  current: 2020-05-07 17:09:15.867
+[2020/05/07 17:09:15][INFO][SessionHandler]  last_used: 2020-05-07 17:08:36.0
+[2020/05/07 17:09:15][INFO][SessionHandler]  expired: 2020-05-07 18:07:10.0
+[2020/05/07 17:09:15][INFO][buildResponse]  Response being built with Result: SESSION_ACTIVE
+[2020/05/07 17:09:16][INFO][privilege]  Entering Privilege Endpoint
+[2020/05/07 17:09:16][INFO][modelMapper]  Mapping object from Json String and Response Model was given
+[2020/05/07 17:09:16][INFO][modelMapper]  JSON String: {"email":"fakeluisae08@uci.edu","plevel":5}
+[2020/05/07 17:09:16][INFO][eInvalidFormat]  fakeluisae08@uci.edu
+[2020/05/07 17:09:16][INFO][privilege]  Exiting Privilege Endpoint Normally
+[2020/05/07 17:09:16][INFO][PrivilegeHandler]  Inside PrivilegeHandler
+[2020/05/07 17:09:16][INFO][userInDb]  Query for looking for user: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('user_id',user_id,'email',email,'status',status,'plevel',plevel,'salt',salt,'pword',pword) as UserFound FROM user WHERE email LIKE 'fakeluisae08@uci.edu';
+[2020/05/07 17:09:16][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:09:16][INFO][modelMapper]  JSON String: {"salt": "c47de7a8", "email": "fakeluisae08@uci.edu", "pword": "c3e757e7a8838259aa4fefa438eb3514af7acd94b54001a51d95e177499d3369755f9472f733ccd14c1f6dcc27b0799fdcd306aeccb6ceaad83c8e4b6d6e9a10", "plevel": 5, "status": 1, "user_id": 24}
+[2020/05/07 17:09:16][INFO][buildResponse]  Response being built with Result: SUFFICIENT_PLEVEL
+[2020/05/07 17:09:16][INFO][privilege]  Entering Privilege Endpoint
+[2020/05/07 17:09:16][INFO][modelMapper]  Mapping object from Json String and Response Model was given
+[2020/05/07 17:09:16][INFO][modelMapper]  JSON String: {"email":"fakeluisae08@uci.edu","plevel":4}
+[2020/05/07 17:09:16][INFO][eInvalidFormat]  fakeluisae08@uci.edu
+[2020/05/07 17:09:16][INFO][privilege]  Exiting Privilege Endpoint Normally
+[2020/05/07 17:09:16][INFO][PrivilegeHandler]  Inside PrivilegeHandler
+[2020/05/07 17:09:16][INFO][userInDb]  Query for looking for user: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('user_id',user_id,'email',email,'status',status,'plevel',plevel,'salt',salt,'pword',pword) as UserFound FROM user WHERE email LIKE 'fakeluisae08@uci.edu';
+[2020/05/07 17:09:16][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:09:16][INFO][modelMapper]  JSON String: {"salt": "c47de7a8", "email": "fakeluisae08@uci.edu", "pword": "c3e757e7a8838259aa4fefa438eb3514af7acd94b54001a51d95e177499d3369755f9472f733ccd14c1f6dcc27b0799fdcd306aeccb6ceaad83c8e4b6d6e9a10", "plevel": 5, "status": 1, "user_id": 24}
+[2020/05/07 17:09:16][INFO][buildResponse]  Response being built with Result: INSUFFICIENT_PLEVEL
+[2020/05/07 17:09:19][INFO][session]  Entering Session Endpoint
+[2020/05/07 17:09:19][INFO][modelMapper]  Mapping object from Json String and Response Model was given
+[2020/05/07 17:09:19][INFO][modelMapper]  JSON String: {"email":"fakeluisae08@uci.edu","session_id":"d1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f"}
+[2020/05/07 17:09:19][INFO][eInvalidFormat]  fakeluisae08@uci.edu
+[2020/05/07 17:09:19][INFO][session]  Exiting Session Endpoint Normally
+[2020/05/07 17:09:19][INFO][SessionHandler]  Inside SessionHandler
+[2020/05/07 17:09:19][INFO][userInDb]  Query for looking for user: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('user_id',user_id,'email',email,'status',status,'plevel',plevel,'salt',salt,'pword',pword) as UserFound FROM user WHERE email LIKE 'fakeluisae08@uci.edu';
+[2020/05/07 17:09:19][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:09:19][INFO][modelMapper]  JSON String: {"salt": "c47de7a8", "email": "fakeluisae08@uci.edu", "pword": "c3e757e7a8838259aa4fefa438eb3514af7acd94b54001a51d95e177499d3369755f9472f733ccd14c1f6dcc27b0799fdcd306aeccb6ceaad83c8e4b6d6e9a10", "plevel": 5, "status": 1, "user_id": 24}
+[2020/05/07 17:09:19][INFO][sessionInDb]  Query for checking if session is in the database: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('session_id',session_id,'email',email,'status',status,'time_created',time_created,'last_used',last_used,'expr_time',expr_time)as SessionFound FROM session WHERE session_id = 'd1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f';
+[2020/05/07 17:09:19][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:09:19][INFO][modelMapper]  JSON String: {"email": "fakeluisae08@uci.edu", "status": 1, "expr_time": "2020-05-07 18:07:10.000000", "last_used": "2020-05-07 17:09:16.000000", "session_id": "d1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f", "time_created": "2020-05-07 17:07:10.000000"}
+[2020/05/07 17:09:19][INFO][SessionHandler]  current: 2020-05-07 17:09:19.33
+[2020/05/07 17:09:19][INFO][SessionHandler]  last_used: 2020-05-07 17:09:16.0
+[2020/05/07 17:09:19][INFO][SessionHandler]  expired: 2020-05-07 18:07:10.0
+[2020/05/07 17:09:19][INFO][buildResponse]  Response being built with Result: SESSION_ACTIVE
+[2020/05/07 17:09:19][INFO][privilege]  Entering Privilege Endpoint
+[2020/05/07 17:09:19][INFO][modelMapper]  Mapping object from Json String and Response Model was given
+[2020/05/07 17:09:19][INFO][modelMapper]  JSON String: {"email":"fakeluisae08@uci.edu","plevel":4}
+[2020/05/07 17:09:19][INFO][eInvalidFormat]  fakeluisae08@uci.edu
+[2020/05/07 17:09:19][INFO][privilege]  Exiting Privilege Endpoint Normally
+[2020/05/07 17:09:19][INFO][PrivilegeHandler]  Inside PrivilegeHandler
+[2020/05/07 17:09:19][INFO][userInDb]  Query for looking for user: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('user_id',user_id,'email',email,'status',status,'plevel',plevel,'salt',salt,'pword',pword) as UserFound FROM user WHERE email LIKE 'fakeluisae08@uci.edu';
+[2020/05/07 17:09:19][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:09:19][INFO][modelMapper]  JSON String: {"salt": "c47de7a8", "email": "fakeluisae08@uci.edu", "pword": "c3e757e7a8838259aa4fefa438eb3514af7acd94b54001a51d95e177499d3369755f9472f733ccd14c1f6dcc27b0799fdcd306aeccb6ceaad83c8e4b6d6e9a10", "plevel": 5, "status": 1, "user_id": 24}
+[2020/05/07 17:09:19][INFO][buildResponse]  Response being built with Result: INSUFFICIENT_PLEVEL
+[2020/05/07 17:09:28][INFO][session]  Entering Session Endpoint
+[2020/05/07 17:09:28][INFO][modelMapper]  Mapping object from Json String and Response Model was given
+[2020/05/07 17:09:28][INFO][modelMapper]  JSON String: {"email":"fakeluisae08@uci.edu","session_id":"d1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f"}
+[2020/05/07 17:09:28][INFO][eInvalidFormat]  fakeluisae08@uci.edu
+[2020/05/07 17:09:28][INFO][session]  Exiting Session Endpoint Normally
+[2020/05/07 17:09:28][INFO][SessionHandler]  Inside SessionHandler
+[2020/05/07 17:09:28][INFO][userInDb]  Query for looking for user: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('user_id',user_id,'email',email,'status',status,'plevel',plevel,'salt',salt,'pword',pword) as UserFound FROM user WHERE email LIKE 'fakeluisae08@uci.edu';
+[2020/05/07 17:09:28][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:09:28][INFO][modelMapper]  JSON String: {"salt": "c47de7a8", "email": "fakeluisae08@uci.edu", "pword": "c3e757e7a8838259aa4fefa438eb3514af7acd94b54001a51d95e177499d3369755f9472f733ccd14c1f6dcc27b0799fdcd306aeccb6ceaad83c8e4b6d6e9a10", "plevel": 5, "status": 1, "user_id": 24}
+[2020/05/07 17:09:28][INFO][sessionInDb]  Query for checking if session is in the database: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('session_id',session_id,'email',email,'status',status,'time_created',time_created,'last_used',last_used,'expr_time',expr_time)as SessionFound FROM session WHERE session_id = 'd1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f';
+[2020/05/07 17:09:28][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:09:28][INFO][modelMapper]  JSON String: {"email": "fakeluisae08@uci.edu", "status": 1, "expr_time": "2020-05-07 18:07:10.000000", "last_used": "2020-05-07 17:09:19.000000", "session_id": "d1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f", "time_created": "2020-05-07 17:07:10.000000"}
+[2020/05/07 17:09:28][INFO][SessionHandler]  current: 2020-05-07 17:09:28.755
+[2020/05/07 17:09:28][INFO][SessionHandler]  last_used: 2020-05-07 17:09:19.0
+[2020/05/07 17:09:28][INFO][SessionHandler]  expired: 2020-05-07 18:07:10.0
+[2020/05/07 17:09:28][INFO][buildResponse]  Response being built with Result: SESSION_ACTIVE
+[2020/05/07 17:09:29][INFO][privilege]  Entering Privilege Endpoint
+[2020/05/07 17:09:29][INFO][modelMapper]  Mapping object from Json String and Response Model was given
+[2020/05/07 17:09:29][INFO][modelMapper]  JSON String: {"email":"fakeluisae08@uci.edu","plevel":4}
+[2020/05/07 17:09:29][INFO][eInvalidFormat]  fakeluisae08@uci.edu
+[2020/05/07 17:09:29][INFO][privilege]  Exiting Privilege Endpoint Normally
+[2020/05/07 17:09:29][INFO][PrivilegeHandler]  Inside PrivilegeHandler
+[2020/05/07 17:09:29][INFO][userInDb]  Query for looking for user: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('user_id',user_id,'email',email,'status',status,'plevel',plevel,'salt',salt,'pword',pword) as UserFound FROM user WHERE email LIKE 'fakeluisae08@uci.edu';
+[2020/05/07 17:09:29][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:09:29][INFO][modelMapper]  JSON String: {"salt": "c47de7a8", "email": "fakeluisae08@uci.edu", "pword": "c3e757e7a8838259aa4fefa438eb3514af7acd94b54001a51d95e177499d3369755f9472f733ccd14c1f6dcc27b0799fdcd306aeccb6ceaad83c8e4b6d6e9a10", "plevel": 5, "status": 1, "user_id": 24}
+[2020/05/07 17:09:29][INFO][buildResponse]  Response being built with Result: INSUFFICIENT_PLEVEL
+[2020/05/07 17:10:09][INFO][session]  Entering Session Endpoint
+[2020/05/07 17:10:09][INFO][modelMapper]  Mapping object from Json String and Response Model was given
+[2020/05/07 17:10:09][INFO][modelMapper]  JSON String: {"email":"fakeluisae08@uci.edu","session_id":"d1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f"}
+[2020/05/07 17:10:09][INFO][eInvalidFormat]  fakeluisae08@uci.edu
+[2020/05/07 17:10:09][INFO][session]  Exiting Session Endpoint Normally
+[2020/05/07 17:10:09][INFO][SessionHandler]  Inside SessionHandler
+[2020/05/07 17:10:09][INFO][userInDb]  Query for looking for user: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('user_id',user_id,'email',email,'status',status,'plevel',plevel,'salt',salt,'pword',pword) as UserFound FROM user WHERE email LIKE 'fakeluisae08@uci.edu';
+[2020/05/07 17:10:09][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:10:09][INFO][modelMapper]  JSON String: {"salt": "c47de7a8", "email": "fakeluisae08@uci.edu", "pword": "c3e757e7a8838259aa4fefa438eb3514af7acd94b54001a51d95e177499d3369755f9472f733ccd14c1f6dcc27b0799fdcd306aeccb6ceaad83c8e4b6d6e9a10", "plevel": 5, "status": 1, "user_id": 24}
+[2020/05/07 17:10:09][INFO][sessionInDb]  Query for checking if session is in the database: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('session_id',session_id,'email',email,'status',status,'time_created',time_created,'last_used',last_used,'expr_time',expr_time)as SessionFound FROM session WHERE session_id = 'd1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f';
+[2020/05/07 17:10:09][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:10:09][INFO][modelMapper]  JSON String: {"email": "fakeluisae08@uci.edu", "status": 1, "expr_time": "2020-05-07 18:07:10.000000", "last_used": "2020-05-07 17:09:29.000000", "session_id": "d1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f", "time_created": "2020-05-07 17:07:10.000000"}
+[2020/05/07 17:10:09][INFO][SessionHandler]  current: 2020-05-07 17:10:09.62
+[2020/05/07 17:10:09][INFO][SessionHandler]  last_used: 2020-05-07 17:09:29.0
+[2020/05/07 17:10:09][INFO][SessionHandler]  expired: 2020-05-07 18:07:10.0
+[2020/05/07 17:10:09][INFO][buildResponse]  Response being built with Result: SESSION_ACTIVE
+[2020/05/07 17:10:13][INFO][session]  Entering Session Endpoint
+[2020/05/07 17:10:13][INFO][modelMapper]  Mapping object from Json String and Response Model was given
+[2020/05/07 17:10:13][INFO][modelMapper]  JSON String: {"email":"fakeluisae08@uci.edu","session_id":"d1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f"}
+[2020/05/07 17:10:13][INFO][eInvalidFormat]  fakeluisae08@uci.edu
+[2020/05/07 17:10:13][INFO][session]  Exiting Session Endpoint Normally
+[2020/05/07 17:10:13][INFO][SessionHandler]  Inside SessionHandler
+[2020/05/07 17:10:13][INFO][userInDb]  Query for looking for user: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('user_id',user_id,'email',email,'status',status,'plevel',plevel,'salt',salt,'pword',pword) as UserFound FROM user WHERE email LIKE 'fakeluisae08@uci.edu';
+[2020/05/07 17:10:13][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:10:13][INFO][modelMapper]  JSON String: {"salt": "c47de7a8", "email": "fakeluisae08@uci.edu", "pword": "c3e757e7a8838259aa4fefa438eb3514af7acd94b54001a51d95e177499d3369755f9472f733ccd14c1f6dcc27b0799fdcd306aeccb6ceaad83c8e4b6d6e9a10", "plevel": 5, "status": 1, "user_id": 24}
+[2020/05/07 17:10:13][INFO][sessionInDb]  Query for checking if session is in the database: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('session_id',session_id,'email',email,'status',status,'time_created',time_created,'last_used',last_used,'expr_time',expr_time)as SessionFound FROM session WHERE session_id = 'd1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f';
+[2020/05/07 17:10:13][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:10:13][INFO][modelMapper]  JSON String: {"email": "fakeluisae08@uci.edu", "status": 1, "expr_time": "2020-05-07 18:07:10.000000", "last_used": "2020-05-07 17:10:10.000000", "session_id": "d1f37fbf45347d3a3a451aa91b85172506649ff6506f4ff269384164c07fa0763eab69c66188c9da9cf0f68b879e63f4feffe83ec01ea384b0597fa4a276046f", "time_created": "2020-05-07 17:07:10.000000"}
+[2020/05/07 17:10:13][INFO][SessionHandler]  current: 2020-05-07 17:10:13.057
+[2020/05/07 17:10:13][INFO][SessionHandler]  last_used: 2020-05-07 17:10:10.0
+[2020/05/07 17:10:13][INFO][SessionHandler]  expired: 2020-05-07 18:07:10.0
+[2020/05/07 17:10:13][INFO][buildResponse]  Response being built with Result: SESSION_ACTIVE
+[2020/05/07 17:10:13][INFO][privilege]  Entering Privilege Endpoint
+[2020/05/07 17:10:13][INFO][modelMapper]  Mapping object from Json String and Response Model was given
+[2020/05/07 17:10:13][INFO][modelMapper]  JSON String: {"email":"fakeluisae08@uci.edu","plevel":4}
+[2020/05/07 17:10:13][INFO][eInvalidFormat]  fakeluisae08@uci.edu
+[2020/05/07 17:10:13][INFO][privilege]  Exiting Privilege Endpoint Normally
+[2020/05/07 17:10:13][INFO][PrivilegeHandler]  Inside PrivilegeHandler
+[2020/05/07 17:10:13][INFO][userInDb]  Query for looking for user: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT JSON_OBJECT('user_id',user_id,'email',email,'status',status,'plevel',plevel,'salt',salt,'pword',pword) as UserFound FROM user WHERE email LIKE 'fakeluisae08@uci.edu';
+[2020/05/07 17:10:13][INFO][modelMapper]  Mapping object from Json String; no Response Model was given.
+[2020/05/07 17:10:13][INFO][modelMapper]  JSON String: {"salt": "c47de7a8", "email": "fakeluisae08@uci.edu", "pword": "c3e757e7a8838259aa4fefa438eb3514af7acd94b54001a51d95e177499d3369755f9472f733ccd14c1f6dcc27b0799fdcd306aeccb6ceaad83c8e4b6d6e9a10", "plevel": 5, "status": 1, "user_id": 24}
+[2020/05/07 17:10:13][INFO][buildResponse]  Response being built with Result: INSUFFICIENT_PLEVEL

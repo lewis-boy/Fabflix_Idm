@@ -1,5 +1,6 @@
 package edu.uci.ics.luisae.service.idm.core;
 
+import edu.uci.ics.luisae.service.idm.Base.RequestModel;
 import edu.uci.ics.luisae.service.idm.Base.ResponseModel;
 import edu.uci.ics.luisae.service.idm.Base.Result;
 import edu.uci.ics.luisae.service.idm.logger.ServiceLogger;
@@ -22,7 +23,7 @@ public class BadRequest {
     private static boolean pInvalidLength(char[] password){
         if (password == null)
             return true;
-        return (password.length <= 0 || password.length > 128);
+        return (password.length > 16 || password.length < 7);
     }
 
     private static boolean eInvalidFormat(String email){
@@ -58,6 +59,7 @@ public class BadRequest {
     }
 
     public static int login(RegisterAndLoginRequest request, LoginAndSessionResponse response){
+        printPassword(request.getPassword());
         return register(request, response);
     }
 
@@ -84,7 +86,6 @@ public class BadRequest {
             return 1;
         }
         else if(eInvalidFormat(request.getEmail())){
-            ServiceLogger.LOGGER.warning("INVALID FORNMAT");
             response.setResult(Result.EMAIL_INVALID_FORMAT);
             return 1;
         }
@@ -94,6 +95,11 @@ public class BadRequest {
         }
         else
             return 0;
+    }
+
+    private static void printPassword(char[] pword){
+        for(char c : pword)
+            ServiceLogger.LOGGER.info(" " + c);
     }
 
     //TODO Finished bad requests portion of register endpoint, finish up endpoint and move on to OK portion.

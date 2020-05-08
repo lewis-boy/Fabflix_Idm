@@ -1,21 +1,17 @@
 package edu.uci.ics.luisae.service.idm.core;
 
-import edu.uci.ics.luisae.service.idm.Base.ResponseModel;
 import edu.uci.ics.luisae.service.idm.Base.Result;
 import edu.uci.ics.luisae.service.idm.IDMService;
-import edu.uci.ics.luisae.service.idm.configs.ServiceConfigs;
 import edu.uci.ics.luisae.service.idm.logger.ServiceLogger;
 import edu.uci.ics.luisae.service.idm.models.*;
 import edu.uci.ics.luisae.service.idm.database.Fetch;
 import edu.uci.ics.luisae.service.idm.database.Insert;
-import edu.uci.ics.luisae.service.idm.security.Crypto;
 import edu.uci.ics.luisae.service.idm.security.Session;
 import edu.uci.ics.luisae.service.idm.utilities.Util;
 import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Hex;
 
 import javax.ws.rs.core.Response;
-import java.lang.invoke.SerializedLambda;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 
@@ -35,7 +31,7 @@ public class LogicHandler {
                 lower = true;
             else
                 ServiceLogger.LOGGER.warning("char was not a letter or number");
-            ServiceLogger.LOGGER.info(String.valueOf(c));
+//            ServiceLogger.LOGGER.info(String.valueOf(c));
         }
         return !(upper && lower && numeric);
     }
@@ -50,13 +46,12 @@ public class LogicHandler {
 
 
     public static Response RegisterHandler(RegisterAndLoginRequest request, RegisterAndPrivilegeResponse response){
+        ServiceLogger.LOGGER.info("Inside RegisterHandler");
         int length = request.getPassword().length;
-        if(length < 7 || length > 16) {
+        if(length < 7 || length > 16)
             response.setResult(Result.PASSWORD_LENGTH_UNSATISFIED);
-        }
-        else if(passwordInvalidChars(request.getPassword())){
+        else if(passwordInvalidChars(request.getPassword()))
             response.setResult(Result.PASSWORD_CHARS_UNSATISFIED);
-        }
         else{
             //get user object and if variable is null
             user the_user = Fetch.userInDb(request.getEmail());
@@ -89,8 +84,6 @@ public class LogicHandler {
             //try password match
             try {
                 SaltAndHash sahLogin = new SaltAndHash(request.getPassword(), Hex.decodeHex(the_user.getSalt()));
-                ServiceLogger.LOGGER.info("Database password: " + the_user.getPword());
-                ServiceLogger.LOGGER.info("Possible password: " + sahLogin.getEncodedPword());
                 if(the_user.getPword().equals(sahLogin.getEncodedPword())){
                     //continue on to get session
                     //search for sessions by email and active status
@@ -118,7 +111,7 @@ public class LogicHandler {
     }
 
     public static Response SessionHandler(SessionRequest request, LoginAndSessionResponse response){
-        ServiceLogger.LOGGER.info("Inside in session handler.");
+        ServiceLogger.LOGGER.info("Inside SessionHandler");
         user the_user = Fetch.userInDb(request.getEmail());
         SessionUser theSession = Fetch.sessionInDb(request.getSession_id());
         if(the_user == null)
@@ -156,7 +149,7 @@ public class LogicHandler {
                         response.setResult(Result.SESSION_REVOKED);
                     }
                     catch(SQLException e) {
-                        ServiceLogger.LOGGER.warning("Problem in Logic Handler, last clause");
+                        ServiceLogger.LOGGER.warning("Problem in Session Handler, last clause");
                     }
                 }
             }
@@ -177,7 +170,7 @@ public class LogicHandler {
     }
 
     public static Response PrivilegeHandler(PrivilegeRequest request, RegisterAndPrivilegeResponse response){
-        ServiceLogger.LOGGER.info("Entering privilege handler");
+        ServiceLogger.LOGGER.info("Inside PrivilegeHandler");
         user theUser = Fetch.userInDb(request.getEmail());
         if(theUser == null)
             response.setResult(Result.USER_NOT_FOUND);

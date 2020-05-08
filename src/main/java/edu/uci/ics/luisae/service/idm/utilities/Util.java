@@ -7,7 +7,6 @@ import edu.uci.ics.luisae.service.idm.Base.ResponseModel;
 import edu.uci.ics.luisae.service.idm.Base.Result;
 import edu.uci.ics.luisae.service.idm.IDMService;
 import edu.uci.ics.luisae.service.idm.logger.ServiceLogger;
-import edu.uci.ics.luisae.service.idm.resources.IdmEndpoints;
 
 import javax.ws.rs.core.Response;
 import java.io.IOException;
@@ -21,17 +20,16 @@ public class Util {
     public static <T, S extends ResponseModel> T modelMapper(
             String jsonString, Class<T> className, S responseModel)
     {
-        ServiceLogger.LOGGER.info("Mapping object from String");
+        ServiceLogger.LOGGER.info("Mapping object from Json String and Response Model was given");
+        ServiceLogger.LOGGER.info("JSON String: " + jsonString);
 
         try {
             return MAPPER.readValue(jsonString, className);
 
         } catch (IOException e) {
+            ServiceLogger.LOGGER.info("Mapping Object Failed IO Exception: " + e.getLocalizedMessage());
             setException(e, responseModel);
         }
-
-        ServiceLogger.LOGGER.info("Mapping Object Failed: " + responseModel.getResult());
-
         return null;
     }
 
@@ -53,13 +51,14 @@ public class Util {
     {
         ObjectMapper mapper = new ObjectMapper();
 
-        ServiceLogger.LOGGER.info("Mapping object");
+        ServiceLogger.LOGGER.info("Mapping object from Json String; no Response Model was given.");
+        ServiceLogger.LOGGER.info("JSON String: " + jsonString);
 
         try {
             return mapper.readValue(jsonString, className);
 
         } catch (IOException e) {
-            ServiceLogger.LOGGER.info("Mapping Object Failed: " + e.getMessage());
+            ServiceLogger.LOGGER.info("Mapping Object Failed IO Exception: " + e.getMessage());
             return null;
 
         }
@@ -68,8 +67,6 @@ public class Util {
     public static PreparedStatement prepareStatement(String query, Param[] paramList)
             throws SQLException
     {
-        ServiceLogger.LOGGER.info("Preparing Statement");
-
         int count = 1;
 
         PreparedStatement ps = IDMService.getCon().prepareStatement(query);
@@ -77,7 +74,7 @@ public class Util {
         for (Param param : paramList)
             ps.setObject(count++, param.getParam(), param.getType());
 
-        ServiceLogger.LOGGER.info("QueryReady: " + ps.toString());
+        ServiceLogger.LOGGER.info("Query prepared from prepareStatement: " + ps.toString());
 
         return ps;
     }

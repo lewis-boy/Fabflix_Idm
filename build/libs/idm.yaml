@@ -15,5 +15,5 @@ databaseConfig:
   dbDriver: com.mysql.cj.jdbc.Driver
   dbSettings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
 sessionConfig:
-  timeout: 180000
-  expiration: 600000
+  timeout: 1800000
+  expiration: 3600000

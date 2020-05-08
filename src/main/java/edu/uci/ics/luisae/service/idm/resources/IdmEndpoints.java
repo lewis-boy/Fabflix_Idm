@@ -21,8 +21,7 @@ public class IdmEndpoints {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response register(String jsonText){
-       ServiceLogger.LOGGER.info("entering register");
-       ServiceLogger.LOGGER.info("jsontext:\n" + jsonText);
+       ServiceLogger.LOGGER.info("Entering Register Endpoint");
         //*****************first map data to request model*********
         //*****************then check request for plausible correctness**********\
         //*****************pass off to data handler **********
@@ -36,8 +35,7 @@ public class IdmEndpoints {
         if(validateData == 1)
             return response.buildResponse();
 
-        //pass to register handler
-        ServiceLogger.LOGGER.info("password before handler: " + String.copyValueOf(request.getPassword()));
+        ServiceLogger.LOGGER.info("Exiting Register Endpoint Normally");
         return LogicHandler.RegisterHandler(request,response);
 
     }
@@ -47,7 +45,7 @@ public class IdmEndpoints {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response login(String jsonText){
-        ServiceLogger.LOGGER.info("entering login");
+        ServiceLogger.LOGGER.info("Entering Login Endpoint");
         //*****************first map data to request model*********
         //*****************then check request for plausible correctness**********\
         //*****************pass off to data handler **********
@@ -60,6 +58,7 @@ public class IdmEndpoints {
         if(validateData == 1)
             return response.buildResponse();
 
+        ServiceLogger.LOGGER.info("Exiting Login Endpoint Normally");
         return LogicHandler.LoginHandler(request, response);
     }
 
@@ -68,7 +67,7 @@ public class IdmEndpoints {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response session(String jsonText){
-        ServiceLogger.LOGGER.info("Entering session");
+        ServiceLogger.LOGGER.info("Entering Session Endpoint");
         LoginAndSessionResponse response = new LoginAndSessionResponse();
         SessionRequest request = Util.modelMapper(jsonText,SessionRequest.class,response);
         if(request == null)
@@ -77,6 +76,7 @@ public class IdmEndpoints {
         if(validateData == 1)
             return response.buildResponse();
 
+        ServiceLogger.LOGGER.info("Exiting Session Endpoint Normally");
         return LogicHandler.SessionHandler(request,response);
     }
 
@@ -85,7 +85,7 @@ public class IdmEndpoints {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response privilege(String jsonText){
-        ServiceLogger.LOGGER.info("Entering privilege");
+        ServiceLogger.LOGGER.info("Entering Privilege Endpoint");
         RegisterAndPrivilegeResponse response = new RegisterAndPrivilegeResponse();
         PrivilegeRequest request = Util.modelMapper(jsonText, PrivilegeRequest.class, response);
         if(request == null)
@@ -93,6 +93,8 @@ public class IdmEndpoints {
         int validateData = BadRequest.privilege(request,response);
         if(validateData == 1 )
             return response.buildResponse();
+
+        ServiceLogger.LOGGER.info("Exiting Privilege Endpoint Normally");
         return LogicHandler.PrivilegeHandler(request, response);
     }
 
